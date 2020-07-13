@@ -28,6 +28,9 @@
 	Tip: Don't forget to import the readline-sync module!
 
   -------------------------------------------- */
+  const READLINE = require("readline-sync");
+
+  question = READLINE.question("Question: ");
 
 
 
@@ -78,6 +81,32 @@
 
 
 
+function tellFortune() {
+	let fortunes = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+	let randomNumber = Math.floor(Math.random() * fortunes.length);
+	let chooseOne = fortunes[randomNumber];
+	console.log("Answer: " + chooseOne);
+}
+
+tellFortune();
+
+
+
+let person = READLINE.question("What's your name?: ");
+if (person != "") {
+  console.log("Hello " + person + "!");
+  let feeling = READLINE.question("How are you today?: ");
+  if (feeling == "good" || "Good") {
+    console.log("Happy to hear that!");
+  }
+  else {
+    console.log("Oh okay.");
+  }
+}
+console.log("Goodbye now.");
+
+
+
 
 
 
@@ -100,6 +129,17 @@
 	Select your own theme and use case and modify your code!
 	
   -------------------------------------------- */
+
+question = READLINE.question("Ask any questions: ");
+
+function tellFortune() {
+	let fortunes = ["It's a bad idea.", "It will never happen.", "Are you sure?", "This will definately be the best decision.", "Follow your path.", "Try it and if it doesn't work, try again.", "Most likely.", "No issue.", "Yes.", "Signs point to yes.", "DO IT AGAIN.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+	let randomNumber = Math.floor(Math.random() * fortunes.length);
+	let chooseOne = fortunes[randomNumber];
+	console.log("Answer: " + chooseOne);
+}
+
+tellFortune();
 
 
 

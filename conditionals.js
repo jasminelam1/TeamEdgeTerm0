@@ -15,6 +15,16 @@ console.log("------------------- Challenge 1 -------------------")
 /* Can you drive?
     Prompt the user to enter their age.
     Write conditional statements that print out whether you can drive in your city. */
+let msg = "";
+msg = READLINE.question("age? ");
+console.log("my age is " + msg);
+
+
+if (msg >= 16) {
+    console.log("you can drive!!! skirt skirt")
+}else {
+    console.log("not old enough!")
+}
 
 
 
@@ -35,7 +45,18 @@ console.log("------------------- Challenge 2 -------------------")
 /* Who placed first?
     Write conditional statements that checks which is the highest and prints the highest score. 
     Hint: Create three variables and assign them random scores. */
+num1 = 14;
+num2 = 14.5;
+num3 = 125;
 
+if (num1>num2 && num1>num3) {
+    console.log(num1);
+} 
+else if (num2>num1 && num2>num3) {
+    console.log(num2);
+} else {
+    console.log(num3);
+}
 
 
 
@@ -65,6 +86,15 @@ console.log("------------------- Challenge 3 -------------------")
 //Here's a variable to get you started:
 let weather = `rainy`;
 
+if (weather === "sunny") {
+    console.log("Wear a hat and sunglasses.");
+}
+else if (weather === "rainy") {
+    console.log("Bring an umbrella."); 
+} else {
+    console.log("Wear gloves and a scarf");
+}
+
 
 
 
@@ -90,7 +120,17 @@ let weather = `rainy`;
    Make sure to account for at least three different temperatures!
    Hint: You will need another variable to keep track of the temperature.
 */
+let temperature = 100;
+temperature = READLINE.question("Temperature? ");
 
+if (temperature <= 40) {
+    console.log("Break out a warmer jacket.");
+}
+else if ( temperature < 40) {
+    console.log("Wear a light jacket."); 
+} else {
+    console.log("No need for a jacket.");
+}
 
 
 
@@ -109,7 +149,32 @@ console.log("------------------- Challenge 4 -------------------")
     Write a set of conditionals that will take a number from 1 to 7 
     and print out the corresponding day of the week. 
     Make sure to add a statement that accounts of any numbers out of range! */
+let num = "";
+num = READLINE.question("Enter a number from 1-7: ");
+if (num == 1) {
+    console.log("Monday");
+}
+else if (num == 2) {
+    console.log("Tuesday");
+}
+else if (num == 3) {
+    console.log("Wednesday");
+}
+else if (num == 4) {
+    console.log("Thursday");
+}
+else if (num == 5) {
+    console.log("Friday");
+}
+else if (num == 6) {
+    console.log("Saturday");
+}
+else if (num == 7) {
+    console.log("Sunday");
 
+} else {
+    console.log("Does not exist.");
+}
 
 
 
@@ -139,8 +204,30 @@ console.log("------------------- Challenge 1 -------------------")
   year stored in a variable is/was a leap year.*/
 
 
+  
+  let year = 2020
+  if (year%4 == 0) {
+  } else {
+    console.log("It's not a Leap Year")
+  if (year%100 == 0) {
+  } else { 
+      console.log("It's a Leap Year")
+  if (year%400 ==0) {
+  } else { 
+      console.log("It's not a Leap year")
+  }
+  }
+  }
 
 
-
-
+  let day = "Saturday"
+  let hoursOfHomework = 2
+   
+  if (day != "Sunday" && day != "Saturday") {
+      console.log("I have to do all of my homework today")
+  } else if (hoursOfHomework <= 2 && day != "Sunday") {
+      console.log("I will do my homework tomorrow")
+  } else {
+      console.log("I will start my homework today and finish it tomorrow")
+  }
 

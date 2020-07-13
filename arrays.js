@@ -35,20 +35,21 @@ console.log("names: " + names)
 // **** Challenge 1 : Part 1 **** 
 // Given an array named food, fill the array with 5 strings.
 
-let food = []
+let food = ["Burgers", "Tacos", "Burritos", "Noodles", "Chips"]
 console.log("food: " + food)  
 
 
 // **** Challenge 1 : Part 2 **** 
 // Declare an array named numbers with 5 numbers.
 
-
+let numbers = [1,2,3,4,5]
 console.log("numbers: " + numbers)   
 
 
 // **** Challenge 1 : Part 3 **** 
 // Declare and log two more arrays with anything you want. 
-
+let desserts = ["Chocolate Cake", "Fruit Tarts", "Ice Cream", "Banana Pudding", "Cupcakes"]
+console.log("desserts: " + desserts);
 
 
 
@@ -65,12 +66,14 @@ console.log("The first name is " + names[0]);
 
 // **** Challenge 2 : Part 1 **** 
 // Log the name of the person from your food array you spoke to last.
-
+console.log("Last name of the name array is " + names[4]);
 
 
 
 // **** Challenge 2 : Part 2 **** 
 // Log the first AND last elements of any array you made.
+console.log("First element " + desserts[1]);
+console.log("Last element " + desserts[4]);
 
 
 
@@ -88,7 +91,12 @@ console.log(names)
 
 // **** Challenge 3 : Part 1 **** 
 // Update all values of your food array with new food items that you're craving.
-
+food[0] = "Pho"
+food[1] = "Pad Sew EW"
+food[2] = "Fried Chickem"
+food[3] = "French Fries"
+food[4] = "Chocolate"
+console.log(food);
 
 
 
@@ -105,7 +113,13 @@ function timesTen(number){
 
 // **** Challenge 3 : Part 2 **** 
 // Write a function that multiplies a number by 1000 and log the array. 
+numbers[4] = timesThousand(numbers[4]);
+console.log(numbers);
 
+function timesThousand(number) {
+    timesThousandNumber = number * 100
+    return timesThousandNumber
+}
 
 
 
@@ -126,7 +140,8 @@ console.log("Current Program Offerings: " + programs);
 
 // **** Challenge 4: ****
 // Declare a new array named 'orders' and store the food and numbers arrays in it. Log the orders array.
-
+let orders = [food, numbers]
+console.log("Orders " + orders);
 
 
 
@@ -149,6 +164,12 @@ console.log("Movies now has: " + movies)
 
 // **** Challenge 5 : Part 1 **** 
 // Add 2 more food items and numbers using .push() to the food and numbers arrays respectively. Log both arrays before and after adding new values.
+food.push("Quiche")
+food.push("Soup")
+console.log(food);
+numbers.push(61)
+numbers.push(65)
+console.log(numbers);
 
 
 
@@ -159,12 +180,14 @@ console.log("Movies now has: " + movies)
 let cities = ["New York", "Oakland", "Las Vegas", "Topeka"]
 console.log("Cities: " + cities)
 let removedCity = cities.pop()
-console.log("Removed City: " + unwantedCity)
+console.log("Removed City: " + removedCity)
 
 
 // **** Challenge 5 : Part 2 **** 
 // Remove your last food item using .pop() and log the removed element.
-
+console.log("Food: " + food);
+let removedFood = food.pop()
+console.log("Removed food: " + removedFood);
 
 
 
@@ -224,7 +247,8 @@ console.log("letter by letter: " + wordSplitArray)
 // **** Challenge 7 : Part 1 **** 
 // Change the name of the person who is late in this sentence and log it.
 let whosLate = "I heard Alex was late to class today."
-
+let late = whosLate.split(names[2]);
+console.log(`I heard ${names[0]} was late to class today.`);
 
 
 
@@ -232,6 +256,9 @@ let whosLate = "I heard Alex was late to class today."
 // **** Challenge 7 : Part 2 **** 
 // Add an exclamation mark to this sentence using split() and push(), then log.
 let makeMeExciting = "What a wonderful day"
+let exclamation = makeMeExciting.split(" ");
+exclamation.push("!")
+console.log(exclamation)
 
 
 
@@ -243,6 +270,7 @@ console.log('Back in one string: ' + rejoined)
 
 // **** Challenge 7 : Part 3 **** 
 // Join one of your arrays together and print out the returned
-
+let happy = exclamation.join(" ");
+console.log(`Back in on string: ` + happy);
 
 

@@ -39,7 +39,26 @@ Write a function that will take the group's order:
 Remember! Functions are meant to be reusable, so write a function that will work when called for each person!
 
 -------------------------------------------- */
+let personOne = READLINE.question("Enter your name: ");
+let personTwo = READLINE.question("Enter your friend's name: ");
+let personThree = READLINE.question("Enter your other friend's name: ");
 
+
+
+function order(person, item) {
+	cost = parseFloat(READLINE.question(`Cost of ${person}'s ${item}: `));
+	return cost
+}
+
+oneMeal = order(personOne, `meal `);
+oneDrink = order(personOne, `drink `);
+twoMeal = order(personTwo, `meal `);
+twoDrink = order(personTwo, `drink `);
+threeMeal = order(personThree, `meal `);
+threeDrink = order(personThree, `drink `);
+
+
+console.log(oneMeal, oneDrink, twoMeal, twoDrink, threeMeal, threeDrink);
 
 
 
@@ -64,8 +83,33 @@ Write a function that will calculate the cost of each person's order, including:
 Remember! Functions are meant to be reusable, so write a function that will work when called for each person!
 
 -------------------------------------------- */
+let oneTotal;
+let twoTotal;
+let threeTotal;
 
 
+function calculate(meal, drink) {
+	userTip = READLINE.question("How much do you want to tip? 10%? 15%? 20%? ");
+	meals = meal + drink;
+	tax = meals * 0.0875;
+	totalWithTax = meals + tax
+	let tip = 0
+	if (userTip == `10%`) {
+		tip = totalWithTax * 0.18;
+	} else if (userTip == `15%`) {
+		tip = totalWithTax * 0.15;
+	} else if (userTip == `20%`) {
+		tip = totalWithTax * 0.20;
+	}
+	total = totalWithTax + tip;
+	return total;
+}
+
+oneTotal = calculate(oneMeal, oneDrink);
+twoTotal = calculate(twoMeal, twoDrink);
+threeTotal = calculate(threeMeal, twoDrink);
+
+console.log(oneTotal, twoTotal, threeTotal);
 
 
 
@@ -90,7 +134,18 @@ The receipt should include:
 Remember! Functions are meant to be reusable, so write a function that will work when called for each person!
 
 -------------------------------------------- */
+function personRecipt(person, meal, drink, total) {
+	console.log(`${person}:
+		Meal: ${meal}
+		Drink: ${drink}
+		+ ${tax} & ${tip}
+		Total: ${total}`);
+	
+}
 
+personRecipt(personOne, oneMeal, oneDrink, oneTotal);
+personRecipt(personTwo, twoMeal, twoDrink, twoTotal);
+personRecipt(personThree, threeMeal, threeDrink, threeTotal);
 
 
 

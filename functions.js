@@ -12,6 +12,27 @@
 
 const READLINE = require("readline-sync");
 
+//function chooser() {
+//	var engineers = ["Durand", "Gideon", ]
+//	randNum = Math.floor(Math.random() * engineers.length);
+//	var choseOne = engineers[randNum];
+//	console.log(chosenOne);
+//}
+
+//choose();
+
+//num = READLINE.question("Do you want 1 or 3 students to be stored in variable num")
+
+//function chooseStudents(num) {
+//	if (num == 1) {
+//		chooser();
+//	} else {
+//		chooser();
+//		chooser();
+//		chooser();
+//	}
+//}
+
 /* -------------------------------------------- 
   Challenge 1: Let's try to write some basic functions.
 -------------------------------------------- */
@@ -20,29 +41,65 @@ const READLINE = require("readline-sync");
 
 // **** Challenge 1: Problem 1 ****
 // Write a function called printMessage() that prints any message you want.
-
+function printMessage() {
+	console.log("Unicorns are real.");
+}
+//printMessage();
 
 // **** Challenge 1: Problem 2 ****
 // Write a function called printFiveMessages() that calls printMessage() five times.
+function printFiveMessages() {
+	printMessage();
+	printMessage();
+	printMessage();
+	printMessage();
+	printMessage();
+}
 
+//printFiveMessages();
 
 // **** Challenge 1: Problem 3 ****
 // Write a function called getUserInput() that asks the user if they'd like to print your message
 // once or five times. Then call one of the two functions above based on what the user decides.
+//let userInput = READLINE.question("1 or 5? ");
+function getUserInput() {
+	if (userInput == 1) {
+		printMessage();
+	} else if(userInput == 5) {
+		printFiveMessages();
+	} else {
+		console.log("Not Possible :(");
+	}
+}
 
+//getUserInput();
 
 // **** Challenge 1: Problem 4 ****
 // Write a function called printGreeting() that prints a greeting message to the user.
+function printGreeting() {
+	console.log("Hello!");
+}
 
+//printGreeting(); 
 
 // **** Challenge 1: Problem 5 ****
 // Write a function called printClosing() that prints a goodbye message to the user.
+function printClosing() {
+	console.log("Goodbye!");
+}
 
+//printClosing();
 
 // **** Challenge 1: Problem 6 ****
 // Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 // Remember! Use the functions that you've already made. Don't hardcode anything!
+function run() {
+	printGreeting()
+	getUserInput();
+	printClosing();
+}
 
+run();
 
 
 /* -------------------------------------------- 
@@ -65,7 +122,9 @@ However, if the two values are the same, the funciton will return double their s
 		sumDouble(2, 2) → 8
 
 -------------------------------------------- */
-
+function sumDouble() {
+	
+}
 
 
 

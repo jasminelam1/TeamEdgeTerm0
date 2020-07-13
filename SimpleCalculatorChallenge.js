@@ -13,6 +13,7 @@
 
   console.log(`My Simple Calculator`);
 
+  const READLINE = require("readline-sync");
 /* -------------------------------------------- 
 
 Part 1: 
@@ -35,8 +36,24 @@ Part 1:
 
 
 
-// Write a function called subNumbers that will take two numbers and return the difference.
+function addNumbers(num1,num2) {
+	var sum = num1 + num2
+	return sum
+}
 
+console.log(addNumbers(1,2));
+
+
+
+
+
+// Write a function called subNumbers that will take two numbers and return the difference.
+function subNumbers(num1, num2) {
+	var difference = num1 - num2
+	return difference
+}
+
+console.log(subNumbers(10,8));
 
 
 
@@ -44,13 +61,13 @@ Part 1:
 /*------------*/
 // Testing Code - Uncomment the code below to test your code!
 
-// checkAnswers(addNumbers(5, 15), 20); 
-// checkAnswers(addNumbers(3, 18), 21);
-// checkAnswers(addNumbers(12, 28), 40); 
+checkAnswers(addNumbers(5, 15), 20); 
+checkAnswers(addNumbers(3, 18), 21);
+checkAnswers(addNumbers(12, 28), 40); 
 
-// checkAnswers(subNumbers(18, 7), 11);
-// checkAnswers(subNumbers(11, 9), 2);
-// checkAnswers(subNumbers(18, 21), -3);
+checkAnswers(subNumbers(18, 7), 11);
+checkAnswers(subNumbers(11, 9), 2);
+checkAnswers(subNumbers(18, 21), -3);
 
 /* -------------------------------------------- 
 
@@ -67,6 +84,12 @@ Part 2:
   -------------------------------------------- */
 
 // Write a function called multiplyNumbers that will take two numbers and return the product.
+function multiplyNumbers(num1, num2) {
+	var multiply = num1 * num2
+	return multiply
+}
+
+console.log(multiplyNumbers(3,2));
 
 
 
@@ -74,7 +97,12 @@ Part 2:
 
 
 // Write a function called divideNumbers that will take two numbers and return the quotent.
+function divideNumbers(num1, num2) {
+	var divide = num1 / num2
+	return divide
+}
 
+console.log(divideNumbers(121,11));
 
 
 
@@ -83,13 +111,13 @@ Part 2:
 /*------------*/
 // Testing Code - Uncomment the code below to test your code!
 
-// checkAnswers(multiplyNumbers(10, 3), 30); 
-// checkAnswers(multiplyNumbers(21, 7), 147);
-// checkAnswers(multiplyNumbers(4, 16), 64); 
+checkAnswers(multiplyNumbers(10, 3), 30); 
+checkAnswers(multiplyNumbers(21, 7), 147);
+checkAnswers(multiplyNumbers(4, 16), 64); 
 
-// checkAnswers(divideNumbers(24, 100), `.24`);
-// checkAnswers(divideNumbers(21, 7), `3`);
-// checkAnswers(divideNumbers(15, 4), `3.75`);
+checkAnswers(divideNumbers(24, 100), `.24`);
+checkAnswers(divideNumbers(21, 7), `3`);
+checkAnswers(divideNumbers(15, 4), `3.75`);
 
 /* -------------------------------------------- 
 
@@ -101,6 +129,31 @@ Part 3:
 Write a function that will prompt the user for the operation they want to call and the values they are inputting.
 
   -------------------------------------------- */
+
+
+let signs = READLINE.question("addition, subtraction, multiplication, substraction? ");
+
+if (signs == "division") {
+	let num1 = parseFloat(READLINE.question("First number: ")); 
+	let num2 = parseFloat(READLINE.question("Second number: ")); 
+	console.log(divideNumbers(num1, num2));
+} else if (signs == "addition") {
+	let num1 = parseFloat(READLINE.question("First number: ")); 
+	let num2 = parseFloat(READLINE.question("Second number: ")); 
+	console.log(addNumbers(num1, num2));
+} else if (signs == "subtraction") {
+	let num1 = parseFloat(READLINE.question("First number: ")); 
+	let num2 = parseFloat(READLINE.question("Second number: ")); 
+	console.log(subNumbers(num1, num2));
+} else if (signs == "multiplication") {
+	let num1 = parseFloat(READLINE.question("First number: ")); 
+	let num2 = parseFloat(READLINE.question("Second number: ")); 
+	console.log(multiplyNumbers(num1, num2));
+} else {
+	console.log("DOES NOT COMPUTE");
+}
+
+
 
 
 
@@ -141,8 +194,13 @@ Don't forget to:
   
   -------------------------------------------- */
 
-
-
+let question = READLINE.question("How many days has it been? ");
+var day = parseFloat(question);
+function moneyPerDay(day) {
+	let money = day * 20
+	return money
+}
+console.log(moneyPerDay(day));
 
 
 
