@@ -12,12 +12,12 @@
 
 const READLINE = require("readline-sync");
 
-//function chooser() {
-//	var engineers = ["Durand", "Gideon", ]
-//	randNum = Math.floor(Math.random() * engineers.length);
-//	var choseOne = engineers[randNum];
-//	console.log(chosenOne);
-//}
+// function chooser() {
+// 	var engineers = ["Durand", "Gideon", ]
+// 	randNum = Math.floor(Math.random() * engineers.length);
+// 	var choseOne = engineers[randNum];
+// 	console.log(chosenOne);
+// }
 
 //choose();
 
@@ -62,6 +62,7 @@ function printFiveMessages() {
 // Write a function called getUserInput() that asks the user if they'd like to print your message
 // once or five times. Then call one of the two functions above based on what the user decides.
 //let userInput = READLINE.question("1 or 5? ");
+userInput = READLINE.question("1 or 5? ");
 function getUserInput() {
 	if (userInput == 1) {
 		printMessage();
@@ -122,9 +123,12 @@ However, if the two values are the same, the funciton will return double their s
 		sumDouble(2, 2) → 8
 
 -------------------------------------------- */
-function sumDouble() {
-	
+function sumDouble(num1, num2) {
+	double = num1 + num2
+	return double
 }
+
+console.log(sumDouble(1, 2));
 
 
 
@@ -145,7 +149,12 @@ Write a function called makes10 that takes two numbers, a and b, and returns tru
 		makes10(1, 9) → true
 
 -------------------------------------------- */
+function makes10(num1, num2) {
+	ten = (num1 + num2 == 10 || num1 && num2 == 10)
+	return ten
+}
 
+console.log(makes10(9, 10));
 
 
 
