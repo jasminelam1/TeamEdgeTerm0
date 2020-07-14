@@ -70,8 +70,8 @@ function addItem(userReply){
 }
 
 function removeItem(userReply){
-    remove = shoppingList.indexOf(userReply);
-    shoppingList.splice(remove);
+    // remove = shoppingList.indexOf(userReply[1]);
+    shoppingList.splice(userReply);
     console.log(shoppingList);
 }
 

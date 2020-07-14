@@ -29,7 +29,9 @@ for(let i = 0 ; i <=10 ; i++) {
 
 //-->TODO: Write a loop that prints a happy birthday message for every year you have been alive.
 
-
+for(let i = 1 ; i <= 17 ; i++){
+    console.log("Happy Birthday!" + i);
+}
 
 console.log("------------------- CHALLENGE 2 : ITERATOR ----------------------")
 
@@ -43,15 +45,19 @@ for(let i = 0 ; i< colors.length; i ++) {
 }
 
 //-->TODO: Declare an array with at least 10 animals. You provide the animals.
-let animals = []
+let animals = ['Tigers', 'Bears', 'Rats', 'Snakes', 'Giraffe', 'Parrots', 'Monkeys', 'Panda', 'Dinosaurs','Unicorns']
 
 //-->TODO: Log all the animals in the array with a for loop. 
+for(let animal = 0 ; animal< animals.length; animal ++) {
+
+    console.log("The animal: " + animals[animal]);
+}
 
 
 console.log("------------------- CHALLENGE 3 : DEBUG -------------------------")
 
 //-->TODO: fix this code so it no longer logs the last item as undefined...
-for(let i = 0 ; i<= colors.length; i ++) {
+for(let i = 0 ; i< colors.length; i ++) {
 
     console.log("The color is: " + colors[i])
 }
@@ -59,7 +65,7 @@ for(let i = 0 ; i<= colors.length; i ++) {
 //-->TODO: fix this code! What could be wrong? It should print out the 5 times tables all the way to 12.
 
 console.log("Behold...the 5 times table: ")
-for(let i = 0 ; i > 12;  i++) {
+for(let i = 0 ; i <= 12;  i++) {
 
     console.log(` 5 x ${i} =  ` + i*5 )
      
@@ -71,9 +77,13 @@ function logArray(array){
 
     for(let i = 0 ; i<array.length ; i++){
 
-        console.log(i)
+        console.log("The test array had " + array[i]); 
     }
 }
+
+test = ['red', 'yellow']
+logArray(test);
+
 
  
 

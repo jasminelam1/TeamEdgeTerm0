@@ -41,6 +41,27 @@ console.log("example counter--> " + num)
 num++
 }
 //-->TODO: Declare a while loop that prints all the prime numbers between 0 and 1000
+let i;
+let number = 0;
+let count;
+
+console.log("Prime Number from 0 to 1000 are: \n");
+while(number <= 1000){
+    count = 0;
+    i = 2;
+    while(i <= number/2){
+        if (number % i == 0){
+            count++;
+        }
+        i++;
+    }
+    if (count == 0 && number != 1){
+        console.log(number);
+    }
+    number++;
+}
+
+
 
 
 
@@ -50,6 +71,19 @@ console.log("------------------- CHALLENGE 2 : FOUND   -------------------")
 let items = ["pencil" , "eraser" , "mirror" , "comb" , "spoon" , "key" , "earrings" ,"cat food" , "magazine"]
 
 //-->TODO: Use a while loop to search the contents of an array for the key! If it exists, print "found the key!"
+
+
+let item = 0
+let keyFound = false
+while (!keyFound){
+    console.log("Item: " + items)
+    if (items[item] == "key") {
+        keyFound = true
+        console.log("Found the key!");
+    }
+    item++  
+}
+    
 
 
 
@@ -63,15 +97,15 @@ console.log("------------------- CHALLENGE 3 : BUGGIN   -------------------")
 //-->TODO: Make me count  2, 4, 6,..., 50
 
 function evenNumbersToFifty(){
-
-    let num = 50
-    while(num <50){
-
-        console.log("number: " + num)
-
+    let i = 1
+    while(i <= 50){
+        if(i%2==0) {
+        console.log("number: " + i)
+        }
+        i++
     }
 }
-evenNumbersToFifty()
+evenNumbersToFifty();
 
 //-->TODO: Make this design  below
 //
@@ -92,14 +126,14 @@ evenNumbersToFifty()
 function pattern(){
 
     let index = 0 
-    let array =[]
+    let array =[];
     
     while(index <= 5 ){
-      
         array.push(index)
-    
-       // console.log(array)
+        console.log(array)
         index++
+        array.pop(index)
+        console.log(array)
     }
 
 }
