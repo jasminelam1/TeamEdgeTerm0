@@ -27,7 +27,7 @@ const LIVES_BOTTOM_RANGE = 40
 let rounds = 1
 let gameIsOn = true
 
-//COMMENT 1: 
+//COMMENT 1: this block of code uses attributes to define superhero.
 class Superhero {
 
     constructor(name, isAlive, friends, hitPoints, isGood , attackPower) {
@@ -40,7 +40,7 @@ class Superhero {
        
      } attack(enemy){
         
-        //COMMENT 2 ....
+        //COMMENT 2 .... checks if both characters are alive. if so, the hero removes a certain amount of damage to the enemy
         if(this.isAlive && enemy.isAlive){  
           
             console.log("  \n   ")
@@ -53,13 +53,13 @@ class Superhero {
                  
             }
 
-             //COMMENT 3....  
+             //COMMENT 3.... randomly picks a sentence from the taunts and prints out the damages and health of the superhero and villian.
             console.log(`${this.name} 💬 : ${this.taunts[randomInteger(0,this.taunts.length-1)]} \n`)
             console.log(`${this.name}  💥X ${damage} ${enemy.name}  ${enemy.lives} : ${enemy.lives.length} \n`)
 
             if(enemy.lives.length <= 0){
                
-                //COMMENT 4....
+                //COMMENT 4.... checks if the enemy is alive or not. If not alive then the code will print game over.
                 enemy.isAlive=false
                 gameIsOn =false
                 console.log(`💀💀💀💀💀💀 ${enemy.name} has been slain!!! 💀💀💀💀💀 `)
@@ -81,7 +81,7 @@ class Superhero {
      }
 
      fillHealth(){
-          //COMMENT 5....
+          //COMMENT 5.... generates the health of players with hearts bwtween 40 and 60.
           let amt = randomInteger(LIVES_BOTTOM_RANGE, LIVES_TOP_RANGE)
            
             for(let i = 0; i <= amt ; i++){
@@ -92,7 +92,7 @@ class Superhero {
     }
  }
 
-//COMMENT 6....
+//COMMENT 6.... batman and jokers are created from the class "superhero" and assign different attributes to each of the players. In the objects, it will fill in a random number hearts for the number of lives they have.
 let batman = new Superhero()
 batman.name="Batman 🦸‍♂️"
 batman.isAlive = true 
@@ -116,7 +116,7 @@ console.log(`${batman.name} 💬 ${batman.taunts[1]}  \n `)
 console.log(`${joker.name} 💬 ${joker.taunts[1]}  \n `)
 
 
-//COMMENT 7....
+//COMMENT 7.... fucntion fight inputs a new round and add the number of attacks changing the lives of the players.
 function fight(a, b){
     console.log(" ------------- ROUND -------------> " + rounds)
     
@@ -134,7 +134,7 @@ function randomInteger(min, max) {
   }
 
 
-  //COMMENT 8....
+  //COMMENT 8.... check if the game is on and if its on, it continues until one player dies.
   let timer = setInterval(function() {
 
     if(gameIsOn){

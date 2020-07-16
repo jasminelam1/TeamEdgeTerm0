@@ -32,6 +32,27 @@ let object = {
         this.isEmpty =true
     }
 }
+
+// let smartPhone = {
+//     screen: "resolution bla bla",
+//     brand: "iPhone",
+//     camera: 14,
+//     isNew: false,
+//     isCracked: true,
+//     features: ["fron-face", "bluetooth"],
+
+//     saveData(){
+//         console.log("your data was saved");
+//     }
+    
+
+// }
+
+// console.log(smartPhone.brand);
+// smartPhone.color = "black"
+// console.log(smartPhone.color)
+
+
 //working with the object:
 object.length = 12
 object.width = 8
@@ -46,6 +67,26 @@ console.log(object)
 //-->TODO: Declare a new object and set at least 4 properties to it including: string, boolean, number, array
 
 //*********************************  MY OBJECT *************************** */
+let waterBottle = {
+    color: "blue",
+    oz: 40,
+    brand: "Hydroflask",
+    isNew: false,
+    isBig: true,
+    features: ["scratch marks", "dents"],
+
+    drinkWater(){
+        this.oz = this.oz - 20
+        console.log("you drank half the bottle.");
+    },
+
+    droppedWater(){
+        this.features.push("color scratched")
+        console.log("you dropped your water bottle again.");
+    }
+
+
+}
 
 
 
@@ -59,10 +100,10 @@ console.log(object)
 console.log("------------------- CHALLENGE 2 : MODIFY   -------------------")
 
 //-->TODO: Log your object you created above
-
+console.log(waterBottle);
 
 //-->TODO: Update the object you just created  by adding new properties and values, including array elements, in this section.
-
+waterBottle.isPerfect = false
 
 //-->TODO: Log your object again and observe changes
 
@@ -71,8 +112,15 @@ console.log("------------------- CHALLENGE 3 : METHOD   -------------------")
 
 //-->TODO: Add at least two methods (object functions) to your object defined in Challenge 1 and invoke them here.
 //          Make your methods update your variables, or add a random number to an array, etc.
+console.log(waterBottle.oz)
+waterBottle.drinkWater()
+console.log(waterBottle.oz)
 
+console.log(waterBottle.features)
+waterBottle.droppedWater()
+console.log(waterBottle.features)
 
 console.log("------------------- CHALLENGE 4 : LITERALLY   -------------------")
 
 //-->TODO: Put it all together using a string literal to tell the story of your object!
+console.log(`My water bottle is already ruined since the 3rd day I've had it. The water bottle has ${waterBottle.features}. I have ${waterBottle.color} ${waterBottle.brand}. Typically I would drink ${waterBottle.oz} oz amount of water. `)
