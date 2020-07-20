@@ -13,7 +13,6 @@ class Room {
         this.description = description;
         this.objects = objects;
         this.paths = paths;
-        this.password = null
 
     }
 }
@@ -35,14 +34,13 @@ let forest = new Room()
 forest.name = "enchanted forest"
 forest.description = "its getting dark and windy. you need to find all the codes to get out."
 forest.objects = ["flashlight", "hammer", "knife"]
-forest.paths = ["cabin", "cave"]
+forest.paths = ["cabin", "cave", "river"]
 
 let cabin = new Room()
 cabin.name = "abandoned cabin"
 cabin.description = "reeks of fresh blood and is dark"
 cabin.objects = ["shove", "bones", "key", "soap"]
 cabin.paths = ["room1", "room2", "room3", "forest"]
-cabin.password = "key1"
 
 let room1 = new Room()
 room1.name = "room1"
@@ -59,7 +57,7 @@ room2.paths = ["cabin"]
 let room3 = new Room()
 room3.name = "a singe light shines. pick it up."
 room3.description = "Welcome to the living room."
-room3.objects = ["key6", "blood",]
+room3.objects = ["key17", "blood",]
 room3.paths = ["cabin"]
 
 let cave = new Room()
@@ -88,9 +86,11 @@ mine.paths = ["cave"]
 
 
 
+
+
 rooms.push(forest, cabin, cave, room1, room2, room3, rail, tunnel, mine) //add the rooms to the rooms array
 
-//************* START GAME *************************
+
 function start() {
 
     console.log("smell the nature");
@@ -129,7 +129,8 @@ function checkAnswer(input) {
 
         console.log(" user typed go to " + newRoom)
 
-        
+        if (currentRoom.paths.includes(newRoom)) {
+            
 
             console.log("Yes you can go there")
 
@@ -141,14 +142,6 @@ function checkAnswer(input) {
 
                     //set the current room by grabbing its index
                     let index = rooms.indexOf(room)
-                    if (currentRoom.paths.includes(newRoom)) {
-                        if(newRoom == cave) {
-                            if(player.items.includes("key1")) {
-                                console.log("you used your key")
-                            } else {
-                                return
-                            }
-                    }
 
                     currentRoom = rooms[index]
                     console.log("You are now at the : " + currentRoom.name);
@@ -201,7 +194,7 @@ function checkAnswer(input) {
             console.log("player has : " + player.items)
 
         } else {
-            console.log("No you can't pick that up")
+            console.log("unable to pick up")
 
         }
         //Name
@@ -211,17 +204,21 @@ function checkAnswer(input) {
 
     } else if (inputMsg.includes("help")) {
 
-        console.log(" You can type 'look' to look around and 'go' to follow a path.")
+        console.log("type 'look' to look around and 'go' to choose your path.")
 
     } else if (inputMsg == "") {
 
         console.log(" input: " + inputMsg)
 
         inputMsg = READLINE.question("What do you want to do? You can type 'help' for commands to use >>> ");
+    } else if (inputMsg.includes("end")){
+        gameIsOn = false
+        console.log("this is the end")
     } else {
-
         console.log(" I don't understand that")
+
     }
+    
 
 }
 
